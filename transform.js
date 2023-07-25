@@ -35,3 +35,13 @@ const datos = [
         ]
     }
 ];
+
+// El listado de los desarrolladores que tengan como habilidad “JavaScript”
+const desarrolladoresJavascript = datos.filter((developer) => developer.habilidades.includes("JavaScript"));
+
+// El listado de los proyectos en el que sus desarrolladores trabajan.
+const nombresProyectos = datos.map((developer) => developer.proyectos.map((elem) => elem.nombre));
+
+
+console.log(desarrolladoresJavascript);
+console.log(nombresProyectos);
