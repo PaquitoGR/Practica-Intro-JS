@@ -21,23 +21,47 @@ llamado bugAsync.js con la solución.
 //             }            
 //         }, 2000);
 //     });    
+// };
+
+// async function fetchingData () {
+//     const usuario = await obtenerUsuario(1)
+//         .then((user) => { return user })
+//         .catch((error) => { console.log(error); })
+//         .finally(() => { console.log("End of process")});
+//     console.log(usuario);
 // }
 
-// obtenerUsuario(1)
-//     .then((user) => { console.log(user); })
-//     .catch((error) => { console.log(error); })
-//     .finally(() => { console.log("End of process")});
+// fetchingData();
+
+
+
+// console.log(usuario);
 
 // con async/await
 
+
 const obtenerUsuario = (id) => {
-    setTimeout(() => {        
-        if (id === 1) {
-            let user = { id: 1, nombre: 'John Doe' };      
-            resolve(user);
-        } else {
-            reject("User not found");
-        }            
-    }, 2000);
+    return new Promise((resolve, reject ) => {
+        setTimeout(() => {        
+            if (id === 1) {
+                let user = { id: 1, nombre: 'John Doe' };      
+                resolve(user);
+            } else {
+                reject("User not found");
+            }            
+        }, 2000);
+    });    
+};
+
+async function solicitaUsuario () {
+    try {
+        const usuario = await obtenerUsuario(2);
+        console.log(usuario);
+    } catch (err){
+        console.log(err);
+    }
 }
+
+
+solicitaUsuario();
 

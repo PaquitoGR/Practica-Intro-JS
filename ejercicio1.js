@@ -20,7 +20,7 @@ let student = {
         {
             network: "Twitter",
             link: "https://twitter.com/Fasuco",
-        }
-    ]
-}
+        },
+    ],
+};
 
