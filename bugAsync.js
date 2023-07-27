@@ -8,21 +8,36 @@ llamado bugAsync.js con la solución.
 
 // Este programa simula una llamada asincrónica para obtener un usuario
 
-const obtenerUsuario = (id) => {
-    return new Promise((resolve, reject ) => {
-        setTimeout(() => {        
-            if (id === 1) {
-                let user = { id: 1, nombre: 'John Doe' };      
-                resolve(user);
-            } else {
-                reject("User not found");
-            }            
-        }, 2000);
-    });    
-}
+// Con promise:
 
-obtenerUsuario(1)
-    .then((user) => { console.log(user); })
-    .catch((error) => { console.log(error); })
-    .finally(() => { console.log("End of process")});
+// const obtenerUsuario = (id) => {
+//     return new Promise((resolve, reject ) => {
+//         setTimeout(() => {        
+//             if (id === 1) {
+//                 let user = { id: 1, nombre: 'John Doe' };      
+//                 resolve(user);
+//             } else {
+//                 reject("User not found");
+//             }            
+//         }, 2000);
+//     });    
+// }
+
+// obtenerUsuario(1)
+//     .then((user) => { console.log(user); })
+//     .catch((error) => { console.log(error); })
+//     .finally(() => { console.log("End of process")});
+
+// con async/await
+
+const obtenerUsuario = (id) => {
+    setTimeout(() => {        
+        if (id === 1) {
+            let user = { id: 1, nombre: 'John Doe' };      
+            resolve(user);
+        } else {
+            reject("User not found");
+        }            
+    }, 2000);
+}
 
