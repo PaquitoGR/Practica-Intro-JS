@@ -26,25 +26,3 @@ obtenerUsuario(1)
     .catch((error) => { console.log(error); })
     .finally(() => { console.log("End of process")});
 
-
-
-// solicitudUsuario(1, (usuario) => {
-//     console.log(usuario);
-// });
-
-
-
-
-// function obtenerUsuarioCallback(id, callback) {
-//     setTimeout(() => {
-//       if (id === 1) {
-//         return callback({ id: 1, nombre: "John Doe" });
-//       } else {
-//         return callback("Wrong user id");
-//       }
-//     }, 2000);
-//   }
-  
-//   obtenerUsuarioCallback(1, (usuario) => {
-//     console.log(usuario);
-//   });
