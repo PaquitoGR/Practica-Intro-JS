@@ -55,13 +55,12 @@ const obtenerUsuario = (id) => {
 
 async function solicitaUsuario () {
     try {
-        const usuario = await obtenerUsuario(2);
+        const usuario = await obtenerUsuario(1);
         console.log(usuario);
     } catch (err){
         console.log(err);
     }
 }
-
 
 solicitaUsuario();
 
