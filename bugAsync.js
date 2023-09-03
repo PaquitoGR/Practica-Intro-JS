@@ -11,56 +11,58 @@ llamado bugAsync.js con la solución.
 // Con promise:
 
 // const obtenerUsuario = (id) => {
-//     return new Promise((resolve, reject ) => {
-//         setTimeout(() => {        
-//             if (id === 1) {
-//                 let user = { id: 1, nombre: 'John Doe' };      
-//                 resolve(user);
-//             } else {
-//                 reject("User not found");
-//             }            
-//         }, 2000);
-//     });    
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (id === 1) {
+//         let user = { id: 1, nombre: "John Doe" };
+//         resolve(user);
+//       } else {
+//         reject("User not found");
+//       }
+//     }, 2000);
+//   });
 // };
 
-// async function fetchingData () {
-//     const usuario = await obtenerUsuario(1)
-//         .then((user) => { return user })
-//         .catch((error) => { console.log(error); })
-//         .finally(() => { console.log("End of process")});
-//     console.log(usuario);
+// async function fetchingData() {
+//   const usuario = await obtenerUsuario(1)
+//     .then((user) => {
+//       return user;
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     })
+//     .finally(() => {
+//       console.log("End of process");
+//     });
+//   console.log(usuario);
 // }
 
 // fetchingData();
-
-
 
 // console.log(usuario);
 
 // con async/await
 
-
 const obtenerUsuario = (id) => {
-    return new Promise((resolve, reject ) => {
-        setTimeout(() => {        
-            if (id === 1) {
-                let user = { id: 1, nombre: 'John Doe' };      
-                resolve(user);
-            } else {
-                reject("User not found");
-            }            
-        }, 2000);
-    });    
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (id === 1) {
+        let user = { id: 1, nombre: "John Doe" };
+        resolve(user);
+      } else {
+        reject("User not found");
+      }
+    }, 2000);
+  });
 };
 
-async function solicitaUsuario () {
-    try {
-        const usuario = await obtenerUsuario(1);
-        console.log(usuario);
-    } catch (err){
-        console.log(err);
-    }
+async function solicitaUsuario() {
+  try {
+    const usuario = await obtenerUsuario(1);
+    console.log(usuario);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 solicitaUsuario();
-

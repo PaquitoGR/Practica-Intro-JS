@@ -6,12 +6,13 @@ Para este ejercicio tenemos que crear un archivo llamado bug.js con la solución
 */
 
 const calcularPromedio = (numeros) => {
-    let sumaTotal = 0;
-    for (let i = 0; i < numeros.length; i++) { // corregido bug, condicion de salida for
+  let sumaTotal = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    // corregido bug, condicion de salida for
     sumaTotal += numeros[i];
-    }
-    const promedio = sumaTotal / numeros.length;
-    return promedio;
-    };
-    const listaNumeros = [1, 2, 3, 4, 5];
-    const promedioNumeros = calcularPromedio(listaNumeros);
+  }
+  const promedio = sumaTotal / numeros.length;
+  return promedio;
+};
+const listaNumeros = [1, 2, 3, 4, 5];
+const promedioNumeros = calcularPromedio(listaNumeros);

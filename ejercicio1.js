@@ -7,20 +7,18 @@ nombre y link de la red social. (Con uno vale, Github por ejemplo, pero dentro d
 */
 
 let student = {
-    firstName: "Francisco",
-    lastName: "Suárez",
-    skills: ["Git", "Html/CSS", "JavaScript", "Python"],
-    lookingForAJob: true,
-    social: [
-        {
-            network: "GitHub",
-            link: "https://github.com/PaquitoGR",
-            
-        },
-        {
-            network: "Twitter",
-            link: "https://twitter.com/Fasuco",
-        },
-    ],
+  firstName: "Francisco",
+  lastName: "Suárez",
+  skills: ["Git", "Html/CSS", "JavaScript", "Python"],
+  lookingForAJob: true,
+  social: [
+    {
+      network: "GitHub",
+      link: "https://github.com/PaquitoGR",
+    },
+    {
+      network: "Twitter",
+      link: "https://twitter.com/Fasuco",
+    },
+  ],
 };
-
